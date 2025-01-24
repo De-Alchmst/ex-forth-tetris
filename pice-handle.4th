@@ -16,7 +16,7 @@
 variable Pice-buffer 16 allot \ 4 * 4 chars
 
 : clear-pice-buffer ( -- )
-  14 0 ?do
+  16 0 ?do
     0 Pice-buffer i + c!
   loop
 ;

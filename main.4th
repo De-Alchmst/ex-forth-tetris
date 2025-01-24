@@ -37,6 +37,7 @@ require io.4th \ <- game-reset is here
   reset-next-pice
   menu-init
   level-reset
+  clear-field
 ;
 
 \ \ \ \ \ \ \

@@ -58,7 +58,7 @@ SAVE-FILE-NAME swap move
 ;
 
 : save-load ( -- )
-  save.dat slurp-file .s drop
+  save.dat slurp-file drop
   dup     c@ to Selected-level
   dup 1 + c@ to Selected-theme
   dup 2 + c@ to Show-next?
