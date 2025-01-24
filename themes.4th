@@ -1,12 +1,21 @@
 0 value Selected-theme
+
+\ While I did add SL\"
+\ it does ALLOT, so you cannot use it with , like this.
+\ You would need to first write the items in reverse, which I don't want to
+\ For those reasons, I do the following hack
+\ EVALUATE is great
+
 6 constant THEME-LENGTH
-create THEME-TEXTS
-  s\" < THEME: Light >\0" drop ,
-  s\" < THEME: Dark >\0" drop ,
-  s\" < THEME: Darker >\0" drop ,
-  s\" < THEME: APERTURE >\0" drop ,
-  s\" < THEME: H4x0r >\0" drop ,
-  s\" < THEME: Kanagawa >\0" drop ,
+:noname
+  s" create THEME-TEXTS" evaluate
+    s\" < THEME: Light >\0" drop ,
+    s\" < THEME: Dark >\0" drop ,
+    s\" < THEME: Darker >\0" drop ,
+    s\" < THEME: APERTURE >\0" drop ,
+    s\" < THEME: H4x0r >\0" drop ,
+    s\" < THEME: Kanagawa >\0" drop ,
+; execute
 
 255 176 0 255 >color constant APERTURE-COLOR
 

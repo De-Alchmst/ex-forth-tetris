@@ -5,8 +5,6 @@
   MENU-LENGTH 0 ?do
     \ text part \
     Menu-texts i cells + @ \ text
-
-    dup 60 type cr
     
     Menu-rects i rectangle% * +
     dup rectangle-y sf@

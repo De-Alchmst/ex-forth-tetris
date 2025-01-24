@@ -3,20 +3,26 @@
 \ \ \ \ \
 0 value Selected-menu-option
 
-create ANIM-TEXTS
-  s\" < OFF >\0" drop ,
-  s\" < NORMAL >\0" drop ,
-  s\" < FAST >\0" drop ,
+\ viz. themes.4th
+
+:noname
+  s" create ANIM-TEXTS" evaluate
+    s\" < OFF >\0" drop ,
+    s\" < NORMAL >\0" drop ,
+    s\" < FAST >\0" drop ,
+; execute
 
 7 constant MENU-LENGTH
-create Menu-texts
-  s\" PLAY\0" drop ,
-  s\" < LEVEL: 1 >\0" drop ,
-  s\" SHOW NEXT [ ]\0" drop ,
-  ANIM-TEXTS @ ,
-  THEME-TEXTS @ ,
-  s\" SCORES\0" drop ,
-  s\" QUIT\0" drop ,
+:noname
+  s" create Menu-texts " evaluate
+    s\" PLAY\0" drop ,
+    s\" < LEVEL: 1 >\0" drop ,
+    s\" SHOW NEXT [ ]\0" drop ,
+    ANIM-TEXTS @ ,
+    THEME-TEXTS @ ,
+    s\" SCORES\0" drop ,
+    s\" QUIT\0" drop ,
+; execute
 
 create Menu-rects rectangle% MENU-LENGTH * allot
 

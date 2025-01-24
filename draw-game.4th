@@ -47,19 +47,19 @@ FIELD-OFFSET-Y 10 - s>f Field-rect rectangle-y sf!
 
 WINDOW-HEIGHT MAIN-TEXT-SIZE - 2/ constant MESSAGE-TEXT-Y
 
-s\" Game Over" drop constant GAME-OVER-TEXT
+sl\" Game Over" drop constant GAME-OVER-TEXT
 
 WINDOW-WIDTH
 GAME-OVER-TEXT MAIN-TEXT-SIZE rl:measure-text
 - 2/ constant GAME-OVER-TEXT-X
 
-s\" PAUSE" drop constant PAUSE-TEXT
+sl\" PAUSE" drop constant PAUSE-TEXT
 
 WINDOW-WIDTH
 PAUSE-TEXT MAIN-TEXT-SIZE rl:measure-text
 - 2/ constant PAUSE-TEXT-X
 
-s\" J - Left | L - Right | K - Rotate | SPACE - Drop | P - Pause\0"
+sl\" J - Left | L - Right | K - Rotate | SPACE - Drop | P - Pause\0"
 drop constant GAME-HINT-TEXT
 WINDOW-WIDTH
 GAME-HINT-TEXT SECONDARY-TEXT-SIZE rl:measure-text
@@ -69,7 +69,7 @@ WINDOW-HEIGHT SECONDARY-TEXT-SIZE - 10 - constant GAME-HINT-Y
 
 create Count-text 2 cells allot
 create Score-text 3 cells allot
-s\" Level:  \0" drop constant Level-text
+sl\" Level:  \0" drop constant Level-text
 
 \ other \
 255 203 0 255 >Color constant Beam-color
