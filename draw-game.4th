@@ -47,7 +47,7 @@ FIELD-OFFSET-Y 10 - s>f Field-rect rectangle-y sf!
 
 WINDOW-HEIGHT MAIN-TEXT-SIZE - 2/ constant MESSAGE-TEXT-Y
 
-sl\" Game Over" drop constant GAME-OVER-TEXT
+sl\" Game Over\0" drop constant GAME-OVER-TEXT
 
 WINDOW-WIDTH
 GAME-OVER-TEXT MAIN-TEXT-SIZE rl:measure-text
