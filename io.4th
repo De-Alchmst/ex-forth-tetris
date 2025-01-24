@@ -80,29 +80,24 @@
     case
       \ select \
       dup KEY-ENTER = over KEY-SPACE = or ?of
-        drop
         menu-select
       endof
 
       \ move selection \
       dup KEY-J = over KEY-DOWN = or ?of
-        drop
         menu-next
       endof
 
       dup KEY-K = over KEY-UP = or ?of
-        drop
         menu-prev
       endof
 
       \ select-sideways \
       dup KEY-H = over KEY-LEFT = or ?of
-        drop
         LEFT menu-sideways
       endof
 
       dup KEY-L = over KEY-RIGHT = or ?of
-        drop
         RIGHT menu-sideways
       endof
     endcase

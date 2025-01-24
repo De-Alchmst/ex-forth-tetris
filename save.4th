@@ -58,7 +58,7 @@ SAVE-FILE-NAME swap move
 ;
 
 : save-load ( -- )
-  save.dat slurp-file drop
+  save.dat slurp-file .s drop
   dup     c@ to Selected-level
   dup 1 + c@ to Selected-theme
   dup 2 + c@ to Show-next?
@@ -80,7 +80,7 @@ SAVE-FILE-NAME swap move
 ;
 
 : save-init ( -- )
-  save.dat w/o open-file
+  save.dat r/w open-file
   0= if \ file found
     close-file throw save-load
   else \ file not found

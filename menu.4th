@@ -7,9 +7,9 @@
 
 :noname
   s" create ANIM-TEXTS" evaluate
-    s\" < OFF >\0" drop ,
-    s\" < NORMAL >\0" drop ,
-    s\" < FAST >\0" drop ,
+    s\" < ANIM SPEED: OFF >\0" drop ,
+    s\" < ANIM SPEED: NORMAL >\0" drop ,
+    s\" < ANIM SPEED: FAST >\0" drop ,
 ; execute
 
 7 constant MENU-LENGTH
