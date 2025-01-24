@@ -4,6 +4,10 @@
 0 value Prev-mode
 
 create Scores-values 10 cells allot
+10 0 do
+  0 Scores-values i cells + !
+loop
+
 create Scores-names  30 cells allot
 
 \ adds empty entries to Scores-names
