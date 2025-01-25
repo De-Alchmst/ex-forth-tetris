@@ -53,7 +53,7 @@ WINDOW-WIDTH
 GAME-OVER-TEXT MAIN-TEXT-SIZE rl:measure-text
 - 2/ constant GAME-OVER-TEXT-X
 
-sl\" PAUSE" drop constant PAUSE-TEXT
+sl\" PAUSE\0" drop constant PAUSE-TEXT
 
 WINDOW-WIDTH
 PAUSE-TEXT MAIN-TEXT-SIZE rl:measure-text

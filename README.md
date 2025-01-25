@@ -1,19 +1,21 @@
 # gforth-tetris
-tetris using Gforth and raylib
 
-inspred by [tint](https://github.com/DavidGriffith/tint.git)
+![](screenshot.jpg)
+
+
+tetris using my own FORTH implementation
+[ex:forth](https://github.com/De-Alchmst/ex-forth) and
+[raylib](https://www.raylib.com/)
+
+inspred by [tint](https://github.com/DavidGriffith/tint.git),
+based on older
+[gforth implementation](https://github.com/De-Alchmst/gforth-tetris)
 
 # setup
-You will need to have 
-[raylib](https://www.raylib.com/) (made with vesion 5.5) and 
-[Gforth](https://gforth.org/) installed.
-Gforth from your package manager should work, but at least for me on
-openSUSE Tumbleweed I needed to compile newer version, as the release version
-(10 years old, according to
-[this github mirror](https://github.com/forthy42/gforth/tree/v0-7-3))
-had problems with C interop.
+You will need to have raylib (made with vesion 5.5) and ex:forth installed.
+Raylib needs to be in the form of shared library.
 
-To start the program, simply run `gforth main.4th`.
+To start the program, simply run `exforth main.4th`.
 
 # score
 - upon pice landing, add 1 to score
