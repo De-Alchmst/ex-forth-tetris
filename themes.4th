@@ -6,7 +6,7 @@
 \ For those reasons, I do the following hack
 \ EVALUATE is great
 
-6 constant THEME-LENGTH
+7 constant THEME-LENGTH
 :noname
   s" create THEME-TEXTS" evaluate
     s\" < THEME: Light >\0" drop ,
@@ -15,6 +15,7 @@
     s\" < THEME: APERTURE >\0" drop ,
     s\" < THEME: H4x0r >\0" drop ,
     s\" < THEME: Kanagawa >\0" drop ,
+    s\" < THEME: Gruvbox Light >\0" drop ,
 ; execute
 
 255 176 0 255 >color constant APERTURE-COLOR
@@ -31,6 +32,18 @@ $93 $81 $a9 255 >color constant K-MAGENTA
 $7a $a8 $9f 255 >color constant K-CYAN
 $e8 $24 $24 255 >color constant K-BRIGHT-RED
 $e9 $8a $00 255 >color constant K-ORANGE
+
+\ Gruvbox theme: https://github.com/morhetz/gruvbox
+$fb $f1 $c7 255 >color constant G-BG
+$3c $38 $36 255 >color constant G-FG
+$cc $24 $1d 255 >color constant G-RED
+$98 $97 $1a 255 >color constant G-GREEN
+$d7 $99 $21 255 >color constant G-YELLOW
+$45 $85 $88 255 >color constant G-BLUE
+$b1 $62 $86 255 >color constant G-PURPLE
+$68 $9d $6a 255 >color constant G-AQUA
+$d6 $5d $0e 255 >color constant G-ORANGE
+$fa $bd $2f 255 >color constant G-BRIGHT-WELLOW
 
 : beam-color! ( a -- )
   Beam-color
@@ -91,29 +104,46 @@ $e9 $8a $00 255 >color constant K-ORANGE
       APERTURE-COLOR to Message-text-color
     endof
     4 of \ H4X0R
-      BLACK to Bg-color
+      BLACK     to Bg-color
       DARKGREEN to Fg-color
-      GREEN all-pices-color!
+      GREEN     all-pices-color!
       DARKGREEN beam-color!
       DARKGREEN to Message-rect-color
-      GREEN to Message-text-color
+      GREEN     to Message-text-color
     endof
     5 of \ KANAGAWA
       K-BG to Bg-color
       K-FG to Fg-color
 
-      K-RED to I-color
-      K-YELLOW to J-color
+      K-RED     to I-color
+      K-YELLOW  to J-color
       K-MAGENTA to L-color
-      K-PINK to T-color
-      K-CYAN to O-color
-      K-GREEN to S-color
-      K-BLUE to Z-color
+      K-PINK    to T-color
+      K-CYAN    to O-color
+      K-GREEN   to S-color
+      K-BLUE    to Z-color
 
       DEF-MESSAGE-RECT-COLOR to Message-rect-color
       K-BRIGHT-RED to Message-text-color
 
       K-ORANGE beam-color!
+    endof
+    6 of \ GRUVBOX
+      G-BG to Bg-color
+      G-FG to Fg-color
+
+      G-RED    to I-color
+      G-YELLOW to J-color
+      G-PURPLE to L-color
+      G-ORANGE to T-color
+      G-AQUA   to O-color
+      G-GREEN  to S-color
+      G-BLUE   to Z-color
+
+      DEF-MESSAGE-RECT-COLOR to Message-rect-color
+      G-RED to Message-text-color
+
+      G-BRIGHT-WELLOW beam-color!
     endof
   endcase
 ;
