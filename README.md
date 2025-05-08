@@ -1,4 +1,4 @@
-# gforth-tetris
+# ex:forth-tetris
 
 ![](screenshot.jpg)
 
