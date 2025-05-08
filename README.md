@@ -32,3 +32,4 @@ To start the program, simply run `exforth main.4th`.
 
 # themes used
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [Gruvbox Light](https://github.com/morhetz/gruvbox)
