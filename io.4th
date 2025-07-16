@@ -122,7 +122,11 @@
     rl:get-key-pressed
     dup
   while
-    PLAYING to Game-mode
+    case
+      KEY-P of
+        PLAYING to Game-mode
+      endof
+    endcase
   repeat
   drop
 ;

@@ -14,6 +14,7 @@ based on older
 # setup
 You will need to have raylib (made with vesion 5.5) and ex:forth installed.
 Raylib needs to be in the form of shared library.
+Make sure it's compiled with Wayland support if that is what you are using.
 
 To start the program, simply run `exforth main.4th`.
 
