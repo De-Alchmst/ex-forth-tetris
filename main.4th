@@ -30,7 +30,7 @@ require io.4th \ <- game-reset is here
 \ \ \ \ \ \ \ \ \ \ \
 
 : init ( -- )
-  KEY-Q rl:set-exit-key
+  \ KEY-Q rl:set-exit-key <- does not allow one to write Q in nick
   60 rl:set-target-fps
   scores-init
   save-init

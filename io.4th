@@ -37,10 +37,10 @@
         PAUSED to Game-mode
       endof
 
-      \ debug \
-      \ KEY-E of
-      \   GAME-OVER to Game-mode
-      \ endof
+      \ quit \
+      KEY-Q of
+        1 to End?
+      endof
     endcase
   repeat
   drop
@@ -65,6 +65,10 @@
       KEY-S of
         GAME-OVER to Prev-mode
         SCORES to Game-mode
+      endof
+
+      KEY-Q of
+        1 to End?
       endof
     endcase
   repeat
@@ -100,6 +104,10 @@
       dup KEY-L = over KEY-RIGHT = or ?of
         RIGHT menu-sideways
       endof
+
+      KEY-Q = ?of
+        1 to End?
+      endof
     endcase
   repeat
   drop
@@ -112,8 +120,8 @@
     dup
   while
     Prev-mode to Game-mode
+    KEY-Q = if 1 to End? then
   repeat
-  drop
 ;
 
 : read-keys-pause ( -- )
@@ -125,6 +133,10 @@
     case
       KEY-P of
         PLAYING to Game-mode
+      endof
+
+      KEY-Q of
+        1 to End?
       endof
     endcase
   repeat
