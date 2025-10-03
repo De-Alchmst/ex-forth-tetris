@@ -5,7 +5,7 @@ require raylib.4th
 \ some stuff needs to run after rl:init-window \
   720 constant WINDOW-HEIGHT
   1024 constant WINDOW-WIDTH
-  WINDOW-WIDTH WINDOW-HEIGHT s" tetris clone in gforth" rl:init-window
+  WINDOW-WIDTH WINDOW-HEIGHT s" tetris clone in ex:forth" rl:init-window
   0 value End?
   1e fvalue Max-countdown
 
